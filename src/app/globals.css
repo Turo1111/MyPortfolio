@@ -1,26 +1,232 @@
 @import "tailwindcss";
 
+/* Design tokens (brief) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0B0B0D;
+  --surface: #121214;
+  --text: #F5F5F7;
+  --muted: #A1A1AA;
+  --accent: #FF8A00;
+  --border: #262626;
+
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #0EA5E9;
+
+  --radius-card: 20px;
+  --radius-chip: 14px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+
+  --radius-card: var(--radius-card);
+  --radius-chip: var(--radius-chip);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Utilities */
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 138, 0, 0.06) 0%, rgba(18, 18, 20, 0.4) 60%), var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  margin-left: 1.6rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-chip);
+  border: 1px solid color-mix(in oklab, var(--accent) 40%, #000);
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
+/* KPI chips */
+.kpi {
+  font-weight: 600;
+}
+
+.kpi-success {
+  border-color: color-mix(in oklab, var(--success) 55%, #000);
+  background: color-mix(in oklab, var(--success) 18%, transparent);
+}
+
+.kpi-info {
+  border-color: color-mix(in oklab, var(--info) 55%, #000);
+  background: color-mix(in oklab, var(--info) 18%, transparent);
+}
+
+.kpi-warning {
+  border-color: color-mix(in oklab, var(--warning) 55%, #000);
+  background: color-mix(in oklab, var(--warning) 18%, transparent);
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.section-title {
+  font-family: var(--font-space-grotesk), var(--font-display), var(--font-sans);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.shadow-soft {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Focus visible styles */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* Hero */
+.hero {
+  background: radial-gradient(80rem 20rem at -10% -10%, rgba(255, 138, 0, 0.18), transparent 60%),
+    radial-gradient(60rem 20rem at 110% 0%, rgba(255, 138, 0, 0.12), transparent 60%);
+}
+
+/* Progress bars */
+.progress {
+  height: 8px;
+  background: #1a1a1a;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress>span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #ff8a00 0%, #ffb84d 100%);
+}
+
+/* Project Card hover */
+.card-hover:hover {
+  transform: translateY(-3px);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 5rem;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 2.25rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), transparent 85%);
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-badge {
+  position: absolute;
+  left: -2rem;
+  top: 0.75rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: radial-gradient(60% 60% at 50% 35%, rgba(255, 138, 0, 0.35), rgba(255, 138, 0, 0.2));
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent) 45%, #000);
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-size: 18px;
+}
+
+/* Education cards */
+.edu-card {
+  border-radius: 16px;
+}
+
+.edu-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent) 40%, #000);
+}
+
+/* Projects */
+.project-banner {
+  height: 220px;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(120% 120% at 10% 0%, rgba(255, 138, 0, 0.22), transparent 60%),
+    linear-gradient(180deg, rgba(255, 138, 0, 0.12), rgba(0, 0, 0, 0.06));
+}
+
+.project-icon {
+  color: var(--accent);
+  font-size: 44px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
 }
