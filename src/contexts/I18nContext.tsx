@@ -1,11 +1,30 @@
 "use client";
 import { createContext, useContext, useMemo, useState, useEffect } from "react";
-import { dict, type Lang } from "@/i18n/dict";
+import {
+    dict,
+    navDict,
+    heroDict,
+    aboutDict,
+    skillsDict,
+    portfolioDict,
+    experienceDict,
+    contactDict,
+    footerDict,
+    type Lang
+} from "@/i18n/dict";
 
 type I18nContextType = {
     lang: Lang;
     setLang: (l: Lang) => void;
     t: (key: string) => string;
+    nav: Record<string, string>;
+    hero: Record<string, string>;
+    about: Record<string, string>;
+    skills: Record<string, string>;
+    portfolio: Record<string, string>;
+    experience: Record<string, string>;
+    contact: Record<string, string>;
+    footer: Record<string, string>;
 };
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
@@ -28,6 +47,14 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
             lang,
             setLang,
             t: (key: string) => dict[lang][key] ?? key,
+            nav: navDict[lang],
+            hero: heroDict[lang],
+            about: aboutDict[lang],
+            skills: skillsDict[lang],
+            portfolio: portfolioDict[lang],
+            experience: experienceDict[lang],
+            contact: contactDict[lang],
+            footer: footerDict[lang],
         }),
         [lang]
     );
