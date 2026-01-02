@@ -23,6 +23,11 @@ import {
     IconTrello,
     IconScrum,
     IconCheck,
+    IconPython,
+    IconJava,
+    IconSpring,
+    IconElectron,
+    IconML,
 } from "@/components/icons";
 
 export default function Skills() {
@@ -66,6 +71,8 @@ export default function Skills() {
                             <span className="chip">{IconNode()} Node.js</span>
                             <span className="chip">{IconExpress()} Express.js</span>
                             <span className="chip">{IconSocket()} Socket.io</span>
+                            <span className="chip">{IconSpring()} Spring Boot</span>
+                            <span className="chip">{IconJava()} Java</span>
                         </div>
                     </div>
                     <div className="card p-4">
@@ -82,14 +89,26 @@ export default function Skills() {
                             <span className="chip">{IconFigma()} Figma</span>
                             <span className="chip">{IconJira()} Jira</span>
                             <span className="chip">{IconTrello()} Trello</span>
+                            <span className="chip">{IconElectron()} Electron</span>
                         </div>
                     </div>
                 </div>
-                <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div className="card p-4">
+                        <h3 className="font-semibold">Machine Learning & AI</h3>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                            <span className="chip">{IconPython()} Python</span>
+                            <span className="chip">{IconML()} LangChain</span>
+                            <span className="chip">{IconML()} Autogen</span>
+                            <span className="chip">{IconML()} MLflow</span>
+                            <span className="chip">{IconML()} Dagster</span>
+                        </div>
+                    </div>
                     <div className="card p-4">
                         <h3 className="font-semibold">{t("skills_methodologies")}</h3>
                         <div className="mt-3 flex flex-wrap gap-2">
                             <span className="chip">{IconScrum()} SCRUM</span>
+                            <span className="chip">{IconScrum()} Kanban</span>
                             <span className="chip">{IconScrum()} {t("skills_agile")}</span>
                         </div>
                     </div>
@@ -106,4 +125,5 @@ export default function Skills() {
         </section>
     );
 }
+
 

@@ -49,6 +49,25 @@ export default function Experience() {
                 { text: t("exp2_kpi4"), type: 'info' as const },
             ],
         },
+        {
+            badge: "🤝",
+            company: "Gestión Olea",
+            position: t("exp3_position"),
+            period: t("exp3_period"),
+            technologies: ['Electron', 'React', 'Node.js', 'Express', 'Git', 'MongoDB'],
+            responsibilities: [
+                t("exp3_resp1"),
+                t("exp3_resp2"),
+                t("exp3_resp3"),
+                t("exp3_resp4"),
+                t("exp3_resp5"),
+            ],
+            kpis: [
+                { text: t("exp3_kpi1"), type: 'success' as const },
+                { text: t("exp3_kpi2"), type: 'info' as const },
+                { text: t("exp3_kpi3"), type: 'success' as const },
+            ],
+        },
     ];
 
     return (

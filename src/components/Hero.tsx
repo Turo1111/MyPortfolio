@@ -11,7 +11,7 @@ export default function Hero() {
                         {t("hero_title")} <span className="text-[var(--accent)]">Matías Zurita</span>
                     </h1>
                     <p className="mt-3 text-2xl md:text-3xl font-bold leading-tight text-[var(--muted)]" style={{ fontFamily: "var(--font-space-grotesk)" }}>
-                        Fullstack Developer
+                        {t("hero_subtitle")}
                     </p>
                     <p className="mt-6 text-xl text-[var(--muted)] max-w-[60ch]">{t("hero_sub")}</p>
                     <div className="mt-8 flex flex-wrap gap-4">
