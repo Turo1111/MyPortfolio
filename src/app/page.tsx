@@ -1,23 +1,16 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import ContactForm from "@/components/ContactForm";
-import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Portfolio from "@/components/Portfolio";
-import Skills from "@/components/Skills";
+import LazySection from "@/components/LazySection";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <About />
-      <Skills />
-      <Portfolio />
-      <Experience />
-
-      <Contact />
-      <Footer />
+      <LazySection component="Hero" minHeight="100vh" />
+      <LazySection component="About" minHeight="400px" />
+      <LazySection component="Skills" minHeight="400px" />
+      {/* <LazySection component="MainSkills" minHeight="300px" /> */}
+      <LazySection component="Portfolio" minHeight="500px" />
+      <LazySection component="Experience" minHeight="400px" />
+      <LazySection component="Contact" minHeight="400px" />
+      <LazySection component="Footer" minHeight="200px" />
     </main>
   );
 }

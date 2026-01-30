@@ -7,20 +7,20 @@ export default function About() {
         <section id="about" className="section bg-[var(--surface)]/60 border-t border-b border-[var(--border)] min-h-screen flex items-center">
             <div className="container grid md:grid-cols-12 gap-12 items-start">
                 {/* Columna izquierda: Sobre mí */}
-                <div className="md:col-span-6">
+                <div className="md:col-span-6 fade-in">
                     <h2 className="section-title">{t("about_title")}</h2>
                     <div className="mt-4 grid gap-4 text-[15px] leading-relaxed text-[var(--muted)] max-w-[66ch]">
-                        <p>{t("about_p1")}</p>
-                        <p>{t("about_p2")}</p>
-                        <p>{t("about_p3")}</p>
+                        <p className="text-about">{t("about_p1")}</p>
+                        <p className="text-about">{t("about_p2")}</p>
+                        <p className="text-about">{t("about_p3")}</p>
                     </div>
                 </div>
 
                 {/* Columna derecha: Educación */}
                 <div className="md:col-span-6">
-                    <h2 className="section-title">{t("education_title")}</h2>
+                    <h2 className="section-title fade-in">{t("education_title")}</h2>
                     <div className="mt-5 grid gap-4">
-                        <div className="card edu-card p-5">
+                        <div className="card edu-card p-5 translate-x">
                             <div className="flex items-center gap-4">
                                 <div className="edu-icon" aria-hidden>🎓</div>
                                 <div className="flex-1">
@@ -30,7 +30,7 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                        <div className="card edu-card p-5">
+                        <div className="card edu-card p-5 translate-x">
                             <div className="flex items-center gap-4">
                                 <div className="edu-icon" aria-hidden>✦</div>
                                 <div className="flex-1">

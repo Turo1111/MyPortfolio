@@ -58,8 +58,8 @@ export default function Portfolio() {
                 portfolio.project1_achievement3,
             ],
             categories: ['fullstack', 'frontend', 'dashboard'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project1_projectLink,
+            codeLink: portfolio.project1_codeLink,
         },
         {
             icon: "👁️",
@@ -72,8 +72,8 @@ export default function Portfolio() {
                 portfolio.project2_achievement3,
             ],
             categories: ['fullstack', 'frontend', 'dashboard'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project2_projectLink,
+            codeLink: portfolio.project2_codeLink,
         },
         {
             icon: "📱",
@@ -86,8 +86,8 @@ export default function Portfolio() {
                 portfolio.project3_achievement3,
             ],
             categories: ['mobile', 'frontend'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project3_projectLink,
+            codeLink: portfolio.project3_codeLink,
         },
         {
             icon: "🔌",
@@ -100,8 +100,8 @@ export default function Portfolio() {
                 portfolio.project4_achievement3,
             ],
             categories: ['backend', 'api'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project4_projectLink,
+            codeLink: portfolio.project4_codeLink,
         },
         {
             icon: "☕",
@@ -114,8 +114,8 @@ export default function Portfolio() {
                 portfolio.project5_achievement3,
             ],
             categories: ['backend', 'api'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project5_projectLink,
+            codeLink: portfolio.project5_codeLink,
         },
         {
             icon: "♻️",
@@ -128,8 +128,8 @@ export default function Portfolio() {
                 portfolio.project6_achievement3,
             ],
             categories: ['frontend'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project6_projectLink,
+            codeLink: portfolio.project6_codeLink,
         },
         {
             icon: "🎓",
@@ -142,8 +142,8 @@ export default function Portfolio() {
                 portfolio.project7_achievement3,
             ],
             categories: ['frontend'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project7_projectLink,
+            codeLink: portfolio.project7_codeLink,
         },
         {
             icon: "📊",
@@ -156,8 +156,8 @@ export default function Portfolio() {
                 portfolio.project8_achievement3,
             ],
             categories: ['ml'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project8_projectLink,
+            codeLink: portfolio.project8_codeLink,
         },
         {
             icon: "🔍",
@@ -170,8 +170,8 @@ export default function Portfolio() {
                 portfolio.project9_achievement3,
             ],
             categories: ['ml'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project9_projectLink,
+            codeLink: portfolio.project9_codeLink,
         },
     ];
 

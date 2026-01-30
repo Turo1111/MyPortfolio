@@ -124,6 +124,7 @@ export const portfolioDict: Record<Lang, Record<string, string>> = {
         project1_achievement1: "Seguimiento de ventas y compras en tiempo real",
         project1_achievement2: "Optimización del stock de productos claves",
         project1_achievement3: "Dashboard en tiempo real con estadísticas de ventas y compras",
+                          
         // Proyecto 2 - Óptica Selecta
         project2_description: "Sistema integral de punto de venta y gestión para óptica con control de inventario, ventas, compras, contabilidad y generación de PDFs en tiempo real.",
         project2_achievement1: "Seguimientos de armado y ventas de armazones con lentes en tiempo real",
@@ -144,26 +145,36 @@ export const portfolioDict: Record<Lang, Record<string, string>> = {
         project5_achievement1: "Arquitectura hexagonal con separación de capas y DTO",
         project5_achievement2: "Testing BDD completo con Cucumber y JUnit",
         project5_achievement3: "Integración dual con JPA y MongoDB para persistencia",
+        project5_projectLink: "https://github.com/Turo1111/backend-tfi-is",
+        project5_codeLink: "https://github.com/Turo1111/backend-tfi-is",
         // Proyecto 6 - Simulador de Reciclaje Smurfit Kappa
         project6_description: "Simulador web de procesos de reciclaje de cartón para Smurfit Kappa con distribuciones estadísticas, análisis de calidad y cálculo de impacto ambiental.",
         project6_achievement1: "Implementó distribuciones Poisson y Normal para simulación realista",
         project6_achievement2: "Sistema de clasificación de calidad en 3 categorías",
         project6_achievement3: "Calcula impacto ambiental y árboles salvados por reciclaje",
+        project6_projectLink: "https://simulador-sk.vercel.app/",
+        project6_codeLink: "https://github.com/Turo1111/simulador-sk",
         // Proyecto 7 - Test Vocacional IA
         project7_description: "Sistema experto de orientación vocacional que simula IA mediante árbol de decisiones multinivel, analizando aptitudes y generando recomendaciones personalizadas de carreras.",
         project7_achievement1: "Motor de inferencia con 3 etapas de preguntas adaptativas",
         project7_achievement2: "Clasificación en 6 áreas: Ciencia, Tecnología, Arte, Salud, Social y Emprendimiento",
         project7_achievement3: "Sistema de ponderación y ranking de carreras sugeridas",
+        project7_projectLink: "https://test-vocacional-xi.vercel.app/",
+        project7_codeLink: "https://github.com/Turo1111/test-vocacional",
         // Proyecto 8 - Toyota ML Pipeline
         project8_description: "Pipeline de Machine Learning para análisis y predicción de precios de Toyota Corolla con orquestación Dagster, tracking MLflow y modelos de regresión.",
         project8_achievement1: "Pipeline automatizado con Dagster para ETL y entrenamiento",
         project8_achievement2: "Tracking de experimentos con MLflow y versionado de modelos",
         project8_achievement3: "Análisis exploratorio completo con visualizaciones estadísticas",
+        project8_projectLink: "https://github.com/santisosa19/dataset_toyota",
+        project8_codeLink: "https://github.com/santisosa19/dataset_toyota",
         // Proyecto 9 - Clustering Data Mining
         project9_description: "Análisis de segmentación mediante clustering para identificar patrones en clientes y productos, optimizando estrategias comerciales con K-means y análisis de rentabilidad.",
         project9_achievement1: "Segmentación de clientes por comportamiento de compra",
         project9_achievement2: "Clustering de productos por rentabilidad y demanda",
         project9_achievement3: "Visualizaciones multidimensionales y análisis comparativo de clusters",
+        project9_projectLink: "https://github.com/Turo1111/dataminingParcialClustering",
+        project9_codeLink: "https://github.com/Turo1111/dataminingParcialClustering",
     },
     en: {
         title: "Featured Projects",

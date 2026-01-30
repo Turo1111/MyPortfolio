@@ -1,6 +1,46 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/contexts/I18nContext";
 import ExperienceCard from "./ExperienceCard";
+
+function ScrollRevealCard({
+    children,
+    delay = 0,
+}: {
+    children: React.ReactNode;
+    delay?: number;
+}) {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) setIsVisible(true);
+            },
+            { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <div
+            ref={ref}
+            className={`transition-all duration-700 ease-out ${
+                isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+            }`}
+            style={isVisible ? { transitionDelay: `${delay}ms` } : undefined}
+        >
+            {children}
+        </div>
+    );
+}
 
 export default function Experience() {
     const { t } = useI18n();
@@ -76,16 +116,17 @@ export default function Experience() {
                 <h2 className="section-title text-center">{t("experience_title")}</h2>
                 <div className="mt-10 grid gap-10 timeline">
                     {experiences.map((exp, index) => (
-                        <ExperienceCard
-                            key={index}
-                            badge={exp.badge}
-                            company={exp.company}
-                            position={exp.position}
-                            period={exp.period}
-                            technologies={exp.technologies}
-                            responsibilities={exp.responsibilities}
-                            kpis={exp.kpis}
-                        />
+                        <ScrollRevealCard key={index} delay={index * 120}>
+                            <ExperienceCard
+                                badge={exp.badge}
+                                company={exp.company}
+                                position={exp.position}
+                                period={exp.period}
+                                technologies={exp.technologies}
+                                responsibilities={exp.responsibilities}
+                                kpis={exp.kpis}
+                            />
+                        </ScrollRevealCard>
                     ))}
                 </div>
             </div>
