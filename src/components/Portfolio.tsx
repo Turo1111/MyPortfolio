@@ -58,8 +58,8 @@ export default function Portfolio() {
                 portfolio.project1_achievement3,
             ],
             categories: ['fullstack', 'frontend', 'dashboard'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: "https://github.com/Turo1111/gestion-web-gz",
+            codeLink: "https://github.com/Turo1111/gestion-web-gz",
         },
         {
             icon: "👁️",
@@ -72,8 +72,8 @@ export default function Portfolio() {
                 portfolio.project2_achievement3,
             ],
             categories: ['fullstack', 'frontend', 'dashboard'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: "https://github.com/Turo1111/optica-app",
+            codeLink: "https://github.com/Turo1111/optica-app",
         },
         {
             icon: "📱",
@@ -86,8 +86,8 @@ export default function Portfolio() {
                 portfolio.project3_achievement3,
             ],
             categories: ['mobile', 'frontend'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: "https://github.com/Turo1111/golozurmobile",
+            codeLink: "https://github.com/Turo1111/golozurmobile",
         },
         {
             icon: "🔌",
@@ -100,8 +100,8 @@ export default function Portfolio() {
                 portfolio.project4_achievement3,
             ],
             categories: ['backend', 'api'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: "https://github.com/Turo1111/gzapi",
+            codeLink: "https://github.com/Turo1111/gzapi",
         },
         {
             icon: "☕",
@@ -114,8 +114,8 @@ export default function Portfolio() {
                 portfolio.project5_achievement3,
             ],
             categories: ['backend', 'api'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: "https://github.com/Turo1111/backend-tfi-is",
+            codeLink: "https://github.com/Turo1111/backend-tfi-is",
         },
         {
             icon: "♻️",
@@ -128,8 +128,8 @@ export default function Portfolio() {
                 portfolio.project6_achievement3,
             ],
             categories: ['frontend'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: "https://github.com/Turo1111/simulador-sk",
+            codeLink: "https://github.com/Turo1111/simulador-sk",
         },
         {
             icon: "🎓",
@@ -142,8 +142,8 @@ export default function Portfolio() {
                 portfolio.project7_achievement3,
             ],
             categories: ['frontend'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: "https://github.com/Turo1111/test-vocacional",
+            codeLink: "https://github.com/Turo1111/test-vocacional",
         },
         {
             icon: "📊",
@@ -170,8 +170,8 @@ export default function Portfolio() {
                 portfolio.project9_achievement3,
             ],
             categories: ['ml'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: "https://github.com/Turo1111/dataminingParcialClustering",
+            codeLink: "https://github.com/Turo1111/dataminingParcialClustering",
         },
     ];
 

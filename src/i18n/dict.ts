@@ -134,8 +134,8 @@ export const portfolioDict: Record<Lang, Record<string, string>> = {
         project3_achievement3: "Incrementó la productividad de vendedores en un 85%",
         // Proyecto 4 - Golozur API
         project4_description: "API REST robusta con TypeScript para backend del ecosistema Golozur, con autenticación JWT, Socket.io para tiempo real y arquitectura escalable.",
-        project4_achievement1: "Maneja +10,000 transacciones diarias sin degradación",
-        project4_achievement2: "Implementó arquitectura MVC con tests automatizados",
+        project4_achievement1: "Maneja +5000 transacciones mensuale",
+        project4_achievement2: "Implementó arquitectura MVC",
         project4_achievement3: "Sistema de sincronización en tiempo real con Socket.io",
         // Proyecto 5 - Sistema de Gestión de Tienda
         project5_description: "API REST empresarial con Spring Boot para gestión integral de tienda, incluyendo inventario, ventas, stock y autorización de pagos con testing BDD.",
