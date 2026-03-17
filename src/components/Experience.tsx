@@ -1,6 +1,46 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/contexts/I18nContext";
 import ExperienceCard from "./ExperienceCard";
+
+function ScrollRevealCard({
+    children,
+    delay = 0,
+}: {
+    children: React.ReactNode;
+    delay?: number;
+}) {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) setIsVisible(true);
+            },
+            { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <div
+            ref={ref}
+            className={`transition-all duration-700 ease-out ${
+                isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+            }`}
+            style={isVisible ? { transitionDelay: `${delay}ms` } : undefined}
+        >
+            {children}
+        </div>
+    );
+}
 
 export default function Experience() {
     const { t } = useI18n();
@@ -49,6 +89,25 @@ export default function Experience() {
                 { text: t("exp2_kpi4"), type: 'info' as const },
             ],
         },
+        {
+            badge: "🤝",
+            company: "Gestión Olea",
+            position: t("exp3_position"),
+            period: t("exp3_period"),
+            technologies: ['Electron', 'React', 'Node.js', 'Express', 'Git', 'MongoDB'],
+            responsibilities: [
+                t("exp3_resp1"),
+                t("exp3_resp2"),
+                t("exp3_resp3"),
+                t("exp3_resp4"),
+                t("exp3_resp5"),
+            ],
+            kpis: [
+                { text: t("exp3_kpi1"), type: 'success' as const },
+                { text: t("exp3_kpi2"), type: 'info' as const },
+                { text: t("exp3_kpi3"), type: 'success' as const },
+            ],
+        },
     ];
 
     return (
@@ -57,16 +116,17 @@ export default function Experience() {
                 <h2 className="section-title text-center">{t("experience_title")}</h2>
                 <div className="mt-10 grid gap-10 timeline">
                     {experiences.map((exp, index) => (
-                        <ExperienceCard
-                            key={index}
-                            badge={exp.badge}
-                            company={exp.company}
-                            position={exp.position}
-                            period={exp.period}
-                            technologies={exp.technologies}
-                            responsibilities={exp.responsibilities}
-                            kpis={exp.kpis}
-                        />
+                        <ScrollRevealCard key={index} delay={index * 120}>
+                            <ExperienceCard
+                                badge={exp.badge}
+                                company={exp.company}
+                                position={exp.position}
+                                period={exp.period}
+                                technologies={exp.technologies}
+                                responsibilities={exp.responsibilities}
+                                kpis={exp.kpis}
+                            />
+                        </ScrollRevealCard>
                     ))}
                 </div>
             </div>

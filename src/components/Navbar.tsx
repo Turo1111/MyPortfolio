@@ -59,12 +59,12 @@ export default function Navbar() {
                     >
                         {lang.toUpperCase()}
                     </button>
-                    <a
+                    {/* <a
                         href="/cv/Jose_Matias_Zurita_CV.pdf"
                         className="hidden sm:inline-flex px-3 py-1 rounded-[12px] bg-[var(--accent)] text-black font-medium"
                     >
                         Download CV
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </header>

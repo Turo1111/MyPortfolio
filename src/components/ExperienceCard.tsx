@@ -21,7 +21,7 @@ export default function ExperienceCard({
     kpis,
 }: ExperienceCardProps) {
     return (
-        <div className="timeline-item">
+        <div className="timeline-item translate-x">
             <div className="timeline-badge">{badge}</div>
             <div className="card p-5">
                 <div className="flex justify-between">

@@ -245,4 +245,51 @@ export function IconLinkedIn() {
   );
 }
 
+export function IconPython() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="5" fill="rgba(255,138,0,0.15)" stroke="#FF8A00" />
+      <text x="5" y="16" fontSize="9" fill="#FF8A00" fontFamily="monospace">PY</text>
+    </svg>
+  );
+}
+
+export function IconJava() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="5" fill="rgba(255,138,0,0.15)" stroke="#FF8A00" />
+      <text x="4" y="16" fontSize="9" fill="#FF8A00" fontFamily="monospace">J</text>
+    </svg>
+  );
+}
+
+export function IconSpring() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 4c4.4 0 8 3.6 8 8s-3.6 8-8 8" stroke="#FF8A00" strokeWidth="1.5" fill="none" />
+      <path d="M12 20c-4.4 0-8-3.6-8-8s3.6-8 8-8" stroke="#FF8A00" strokeWidth="1.5" fill="none" />
+    </svg>
+  );
+}
+
+export function IconElectron() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="9" stroke="#FF8A00" fill="none" />
+      <circle cx="12" cy="12" r="5" stroke="#FF8A00" fill="none" />
+      <circle cx="12" cy="12" r="1.5" fill="#FF8A00" />
+    </svg>
+  );
+}
+
+export function IconML() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 18l6-6 4 4 4-8" stroke="#FF8A00" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="4" cy="20" r="1.5" fill="#FF8A00" />
+      <circle cx="20" cy="6" r="1.5" fill="#FF8A00" />
+    </svg>
+  );
+}
+
 

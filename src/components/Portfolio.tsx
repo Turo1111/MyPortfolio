@@ -58,8 +58,13 @@ export default function Portfolio() {
                 portfolio.project1_achievement3,
             ],
             categories: ['fullstack', 'frontend', 'dashboard'] as ProjectCategory[],
+<<<<<<< HEAD
             projectLink: "https://github.com/Turo1111/gestion-web-gz",
             codeLink: "https://github.com/Turo1111/gestion-web-gz",
+=======
+            projectLink: portfolio.project1_projectLink,
+            codeLink: portfolio.project1_codeLink,
+>>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
         },
         {
             icon: "👁️",
@@ -72,8 +77,13 @@ export default function Portfolio() {
                 portfolio.project2_achievement3,
             ],
             categories: ['fullstack', 'frontend', 'dashboard'] as ProjectCategory[],
+<<<<<<< HEAD
             projectLink: "https://github.com/Turo1111/optica-app",
             codeLink: "https://github.com/Turo1111/optica-app",
+=======
+            projectLink: portfolio.project2_projectLink,
+            codeLink: portfolio.project2_codeLink,
+>>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
         },
         {
             icon: "📱",
@@ -86,8 +96,13 @@ export default function Portfolio() {
                 portfolio.project3_achievement3,
             ],
             categories: ['mobile', 'frontend'] as ProjectCategory[],
+<<<<<<< HEAD
             projectLink: "https://github.com/Turo1111/golozurmobile",
             codeLink: "https://github.com/Turo1111/golozurmobile",
+=======
+            projectLink: portfolio.project3_projectLink,
+            codeLink: portfolio.project3_codeLink,
+>>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
         },
         {
             icon: "🔌",
@@ -100,8 +115,13 @@ export default function Portfolio() {
                 portfolio.project4_achievement3,
             ],
             categories: ['backend', 'api'] as ProjectCategory[],
+<<<<<<< HEAD
             projectLink: "https://github.com/Turo1111/gzapi",
             codeLink: "https://github.com/Turo1111/gzapi",
+=======
+            projectLink: portfolio.project4_projectLink,
+            codeLink: portfolio.project4_codeLink,
+>>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
         },
         {
             icon: "☕",
@@ -114,8 +134,13 @@ export default function Portfolio() {
                 portfolio.project5_achievement3,
             ],
             categories: ['backend', 'api'] as ProjectCategory[],
+<<<<<<< HEAD
             projectLink: "https://github.com/Turo1111/backend-tfi-is",
             codeLink: "https://github.com/Turo1111/backend-tfi-is",
+=======
+            projectLink: portfolio.project5_projectLink,
+            codeLink: portfolio.project5_codeLink,
+>>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
         },
         {
             icon: "♻️",
@@ -128,8 +153,13 @@ export default function Portfolio() {
                 portfolio.project6_achievement3,
             ],
             categories: ['frontend'] as ProjectCategory[],
+<<<<<<< HEAD
             projectLink: "https://github.com/Turo1111/simulador-sk",
             codeLink: "https://github.com/Turo1111/simulador-sk",
+=======
+            projectLink: portfolio.project6_projectLink,
+            codeLink: portfolio.project6_codeLink,
+>>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
         },
         {
             icon: "🎓",
@@ -142,8 +172,13 @@ export default function Portfolio() {
                 portfolio.project7_achievement3,
             ],
             categories: ['frontend'] as ProjectCategory[],
+<<<<<<< HEAD
             projectLink: "https://github.com/Turo1111/test-vocacional",
             codeLink: "https://github.com/Turo1111/test-vocacional",
+=======
+            projectLink: portfolio.project7_projectLink,
+            codeLink: portfolio.project7_codeLink,
+>>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
         },
         {
             icon: "📊",
@@ -156,8 +191,8 @@ export default function Portfolio() {
                 portfolio.project8_achievement3,
             ],
             categories: ['ml'] as ProjectCategory[],
-            projectLink: "#",
-            codeLink: "#",
+            projectLink: portfolio.project8_projectLink,
+            codeLink: portfolio.project8_codeLink,
         },
         {
             icon: "🔍",
@@ -170,8 +205,13 @@ export default function Portfolio() {
                 portfolio.project9_achievement3,
             ],
             categories: ['ml'] as ProjectCategory[],
+<<<<<<< HEAD
             projectLink: "https://github.com/Turo1111/dataminingParcialClustering",
             codeLink: "https://github.com/Turo1111/dataminingParcialClustering",
+=======
+            projectLink: portfolio.project9_projectLink,
+            codeLink: portfolio.project9_codeLink,
+>>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
         },
     ];
 
