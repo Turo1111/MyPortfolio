@@ -124,26 +124,30 @@ export const portfolioDict: Record<Lang, Record<string, string>> = {
         project1_achievement1: "Seguimiento de ventas y compras en tiempo real",
         project1_achievement2: "Optimización del stock de productos claves",
         project1_achievement3: "Dashboard en tiempo real con estadísticas de ventas y compras",
-                          
+        project1_projectLink: "https://github.com/Turo1111/gestion-web-gz",
+        project1_codeLink: "https://github.com/Turo1111/gestion-web-gz",
+
         // Proyecto 2 - Óptica Selecta
         project2_description: "Sistema integral de punto de venta y gestión para óptica con control de inventario, ventas, compras, contabilidad y generación de PDFs en tiempo real.",
         project2_achievement1: "Seguimientos de armado y ventas de armazones con lentes en tiempo real",
         project2_achievement2: "Sistema de códigos de barras para control de inventario",
         project2_achievement3: "Dashboard con gráficos en tiempo real y gestión multi-sucursal",
+        project2_projectLink: "https://github.com/Turo1111/optica-app",
+        project2_codeLink: "https://github.com/Turo1111/optica-app",
         // Proyecto 3 - Golozur Mobile
         project3_description: "Aplicación móvil de ventas con capacidad offline-first para vendedores de productos gourmet, con gestión completa de clientes, productos y rutas.",
         project3_achievement1: "Permitió ventas sin conexión con sincronización automática",
         project3_achievement2: "Integró Google Maps para visualización de ubicaciones de clientes",
         project3_achievement3: "Incrementó la productividad de la cadena de suministros",
+        project3_projectLink: "https://github.com/Turo1111/golozurmobile",
+        project3_codeLink: "https://github.com/Turo1111/golozurmobile",
         // Proyecto 4 - Golozur API
         project4_description: "API REST robusta con TypeScript para backend del ecosistema Golozur, con autenticación JWT, Socket.io para tiempo real y arquitectura escalable.",
-<<<<<<< HEAD
-        project4_achievement1: "Maneja +5000 transacciones mensuale",
-=======
         project4_achievement1: "Maneja transacciones por multiples usuarios en tiempo real",
->>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
         project4_achievement2: "Implementó arquitectura MVC",
         project4_achievement3: "Sistema de sincronización en tiempo real con Socket.io",
+        project4_projectLink: "https://github.com/Turo1111/gzapi",
+        project4_codeLink: "https://github.com/Turo1111/gzapi",
         // Proyecto 5 - Sistema de Gestión de Tienda
         project5_description: "API REST empresarial con Spring Boot para gestión integral de tienda, incluyendo inventario, ventas, stock y autorización de pagos con testing BDD.",
         project5_achievement1: "Arquitectura hexagonal con separación de capas y DTO",

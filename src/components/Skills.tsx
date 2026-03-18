@@ -89,12 +89,9 @@ export default function Skills() {
                             <span className="chip">{IconFigma()} Figma</span>
                             <span className="chip">{IconJira()} Jira</span>
                             <span className="chip">{IconTrello()} Trello</span>
-<<<<<<< HEAD
                             <span className="chip">{IconCheck()} OpenCode</span>
                             <span className="chip">{IconCheck()} Claudecode</span>
-=======
                             <span className="chip">{IconElectron()} Electron</span>
->>>>>>> fe9d8779404ac2cda8f47a75accffcbcd5193895
                         </div>
                     </div>
                 </div>
