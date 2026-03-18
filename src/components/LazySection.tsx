@@ -49,7 +49,7 @@ export default function LazySection({
     return () => {
       cancelled = true;
     };
-  }, [isVisible, component]);
+  }, [isVisible, loader]);
 
   useEffect(() => {
     const el = containerRef.current;

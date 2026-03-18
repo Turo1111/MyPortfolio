@@ -23,7 +23,6 @@ import {
   IconFigma,
   IconJira,
   IconTrello,
-  IconScrum,
   IconCheck,
   IconPython,
   IconJava,
@@ -33,10 +32,15 @@ import {
 } from "@/components/icons";
 
 type Tier = "core" | "secondary";
+type BubbleStyle = React.CSSProperties & {
+  "--dx": string;
+  "--dy": string;
+};
+
 type BubbleItem = {
   id: string;
   label: string;
-  icon?: () => JSX.Element;
+  icon?: React.ComponentType;
   tier: Tier;
   size: number; // px (diámetro)
 };
@@ -107,7 +111,7 @@ export default function Skills() {
       { id: "redux", label: "Redux", icon: IconRedux, tier: "secondary", size: 70 },
       { id: "styled", label: "Styled-Components", icon: IconStyled, tier: "secondary", size: 86 },
       { id: "tailwind", label: "TailwindCSS", icon: IconTailwind, tier: "secondary", size: 80 },
-      { id: "sass", label: "SASS", icon: IconSass, tier: "secondary", size: 66 },   
+      { id: "sass", label: "SASS", icon: IconSass, tier: "secondary", size: 66 },
       { id: "less", label: "LESS", icon: IconLess, tier: "secondary", size: 64 },
 
       { id: "express", label: "Express.js", icon: IconExpress, tier: "secondary", size: 74 },
@@ -140,7 +144,7 @@ export default function Skills() {
     ];
 
     return [...core, ...secondary];
-  }, [t, softSkills]);
+  }, [softSkills]);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [layout, setLayout] = useState<Record<string, LayoutPoint>>({});
@@ -212,9 +216,9 @@ export default function Skills() {
             for (let j = i + 1; j < nodes.length; j++) {
               const A = nodes[i];
               const B = nodes[j];
-              let dx = B.x - A.x;
-              let dy = B.y - A.y;
-              let dist = Math.hypot(dx, dy) || 0.0001;
+              const dx = B.x - A.x;
+              const dy = B.y - A.y;
+              const dist = Math.hypot(dx, dy) || 0.0001;
 
               const minDist = A.r + B.r + gap;
               if (dist < minDist) {
@@ -311,35 +315,35 @@ export default function Skills() {
             const top = p.y - it.size / 2;
 
             const isCore = it.tier === "core";
+            const Icon = it.icon;
+            const bubbleStyle: BubbleStyle = {
+              left,
+              top,
+              width: it.size,
+              height: it.size,
+              "--dx": `${p.driftX.toFixed(2)}px`,
+              "--dy": `${p.driftY.toFixed(2)}px`,
+              animation: `drift ${p.dur.toFixed(2)}s ease-in-out ${p.delay.toFixed(2)}s infinite alternate`,
+            };
 
             return (
               <div
                 key={it.id}
                 className="absolute rounded-full bg-black text-white grid place-items-center select-none"
-                style={{
-                  left,
-                  top,
-                  width: it.size,
-                  height: it.size,
-                  // drift vars
-                  ["--dx" as any]: `${p.driftX.toFixed(2)}px`,
-                  ["--dy" as any]: `${p.driftY.toFixed(2)}px`,
-                  animation: `drift ${p.dur.toFixed(2)}s ease-in-out ${p.delay.toFixed(2)}s infinite alternate`,
-                }}
+                style={bubbleStyle}
               >
                 {/* contenido */}
                 <div className="flex flex-col items-center justify-center text-center px-2">
-                  {it.icon ? (
+                  {Icon ? (
                     <div className="[&_*]:text-white [&_*]:fill-white">
-                      {it.icon()}
+                      <Icon />
                     </div>
                   ) : null}
 
                   {showLabels ? (
                     <span
-                      className={`mt-1 font-semibold leading-tight ${
-                        isCore ? "text-[12px] sm:text-sm" : "text-[10px] sm:text-xs"
-                      }`}
+                      className={`mt-1 font-semibold leading-tight ${isCore ? "text-[12px] sm:text-sm" : "text-[10px] sm:text-xs"
+                        }`}
                       style={{
                         maxWidth: it.size - 12,
                       }}
